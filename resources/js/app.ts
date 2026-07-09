@@ -1,7 +1,10 @@
 import { createInertiaApp } from '@inertiajs/vue3';
+import Aura from '@primeuix/themes/aura';
+import PrimeVue from 'primevue/config';
 import { initializeTheme } from '@/composables/useAppearance';
 import AppLayout from '@/layouts/AppLayout.vue';
 import AuthLayout from '@/layouts/AuthLayout.vue';
+import BlogLayout from '@/layouts/BlogLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
 import { initializeFlashToast } from '@/lib/flashToast';
 
@@ -17,9 +20,18 @@ createInertiaApp({
                 return AuthLayout;
             case name.startsWith('settings/'):
                 return [AppLayout, SettingsLayout];
+            case name.startsWith('blog/'):
+                return BlogLayout;
             default:
                 return AppLayout;
         }
+    },
+    withApp(app) {
+        app.use(PrimeVue, {
+            theme: {
+                preset: Aura,
+            },
+        });
     },
     progress: {
         color: '#4B5563',

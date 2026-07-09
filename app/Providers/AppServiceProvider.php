@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Configure default behaviors for production-ready applications.
+     * Configure core behaviors for production-ready applications.
      */
     protected function configureDefaults(): void
     {

@@ -75,7 +75,7 @@ export function initializeTheme(): void {
         return;
     }
 
-    // Initialize theme from saved preference or default to system...
+    // Initialize theme from saved preference or core to system...
     const savedAppearance = getStoredAppearance();
     updateTheme(savedAppearance || 'system');
 

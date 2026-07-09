@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { Form, Head } from '@inertiajs/vue3';
 import SecurityController from '@/actions/App/Http/Controllers/Settings/SecurityController';
-import Heading from '@/components/Heading.vue';
-import InputError from '@/components/InputError.vue';
-import type { Props as ManagePasskeysProps } from '@/components/ManagePasskeys.vue';
-import ManagePasskeys from '@/components/ManagePasskeys.vue';
-import type { Props as ManageTwoFactorProps } from '@/components/ManageTwoFactor.vue';
-import ManageTwoFactor from '@/components/ManageTwoFactor.vue';
-import PasswordInput from '@/components/PasswordInput.vue';
+import Heading from '@/components/core/Heading.vue';
+import InputError from '@/components/core/InputError.vue';
+import type { Props as ManagePasskeysProps } from '@/components/core/ManagePasskeys.vue';
+import ManagePasskeys from '@/components/core/ManagePasskeys.vue';
+import type { Props as ManageTwoFactorProps } from '@/components/core/ManageTwoFactor.vue';
+import ManageTwoFactor from '@/components/core/ManageTwoFactor.vue';
+import PasswordInput from '@/components/core/PasswordInput.vue';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { edit } from '@/routes/security';

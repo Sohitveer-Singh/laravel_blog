@@ -1,17 +1,110 @@
 <script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
-import { dashboard, login } from '@/routes';
-import { register } from '@/routes';
+// import Check from '@primeicons/vue/check';
+import BlogCard from '@/components/BlogCard.vue';
+import BlogLayout from '@/layouts/BlogLayout.vue';
+
+defineOptions({
+    layout: BlogLayout,
+});
+
+const posts = [
+    {
+        id: 1,
+        title: 'How To Deploy Laravel on Fedora VPS',
+        excerpt: 'This is a sample blog post preview...',
+        author: 'Sohitveer Singh',
+        publishedAt: '2 July 2026',
+        tags: ['Featured', 'Linux', 'Laravel', 'PHP'],
+        link: '/blog/how-to-deploy-laravel-on-fedora-vps',
+    },
+    {
+        id: 2,
+        title: 'Getting Started with Vue 3',
+        excerpt: 'Learn the Composition API and Inertia...',
+        author: 'Sohitveer Singh',
+        publishedAt: '1 July 2026',
+        tags: ['Vue', 'Inertia', 'Frontend'],
+        link: '/blog/getting-started-with-vue-3',
+    },
+];
 </script>
 
 <template>
-    <Head title="Welcome">
-        <link rel="preconnect" href="https://rsms.me/" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    </Head>
-    <div
-        class="flex min-h-screen flex-col items-center bg-[#FDFDFC] p-6 text-[#1b1b18] lg:justify-center lg:p-8 dark:bg-[#0a0a0a]"
-    >
+    <div class="pt-17.5">
+        <div class="container mx-auto mt-5 grid grid-cols-12 gap-4 px-5 py-5">
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
 
+            <!--       Fill Layout Temporary Start     -->
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
+            <BlogCard
+                v-for="post in posts"
+                :key="post.id"
+                :title="post.title"
+                :excerpt="post.excerpt"
+                :author="post.author"
+                :published-at="post.publishedAt"
+                :tags="post.tags"
+                :link="post.link"
+            />
+            <!--       Fill Layout Temporary End    -->
+        </div>
     </div>
 </template>
